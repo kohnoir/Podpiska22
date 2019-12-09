@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Подписка</string>
+    <string name="btn1">OK</string>
+    <string name="btn2">Очистить</string>
+    <string name="underTxt">Введите email</string>
+    <string name="editEmail">Введите имя</string>
+    <string name="txt_first">Подписка на рассылку успешно оформлена для пользователя</string>
+    <string name="txt_second">на электронный адрес</string>
+
+</resources>
