@@ -9,7 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    Button btn1 ;
+    Button btn2 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
         Clear();
     }
     private void Init () {
-        Button btn1 = (Button) findViewById(R.id.btn1);
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn1 = (Button) findViewById(R.id.btn1);
                 EditText name = findViewById(R.id.editEmail);
                 EditText email = findViewById(R.id.underTxt);
                 String str = getString(R.string.txt_second)  + " " + name.getText().toString()+" "+getString(R.string.txt_first) + " " + email.getText().toString();
@@ -33,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void Clear(){
-        Button btn2 = (Button) findViewById(R.id.btn2);
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn2 = (Button) findViewById(R.id.btn2);
+        btn2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView underTxt = (TextView)findViewById(R.id.underTxt);
