@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn1 = (Button) findViewById(R.id.btn1);
+                btn1 = findViewById(R.id.btn1);
                 EditText name = findViewById(R.id.editEmail);
                 EditText email = findViewById(R.id.underTxt);
                 String str = getString(R.string.txt_second)  + " " + name.getText().toString()+" "+getString(R.string.txt_first) + " " + email.getText().toString();
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void Clear(){
-        btn2 = (Button) findViewById(R.id.btn2);
+        btn2 =  findViewById(R.id.btn2);
         btn2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
