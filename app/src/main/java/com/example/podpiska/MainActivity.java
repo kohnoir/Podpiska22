@@ -11,21 +11,26 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Button btn1 ;
     Button btn2 ;
+    EditText name;
+    EditText email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Init();
-        Clear();
+        init();
+        initOk();
+        initClear();
     }
-    private void Init () {
-
+    private void init(){
+        btn1 = findViewById(R.id.btn1);
+        name = findViewById(R.id.editEmail);
+        email = findViewById(R.id.underTxt);
+    }
+    private void initOk () {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn1 = findViewById(R.id.btn1);
-                EditText name = findViewById(R.id.editEmail);
-                EditText email = findViewById(R.id.underTxt);
+
                 String str = getString(R.string.txt_second)  + " " + name.getText().toString()+" "+getString(R.string.txt_first) + " " + email.getText().toString();
                 TextView textView = findViewById(R.id.txt);
                 textView.setText(str);
@@ -34,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void Clear(){
+    private void initClear(){
         btn2 =  findViewById(R.id.btn2);
         btn2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView underTxt = (TextView)findViewById(R.id.underTxt);
+                TextView underTxt = findViewById(R.id.underTxt);
                 underTxt.setText("");
-                TextView editEmail = (TextView)findViewById(R.id.editEmail);
+                TextView editEmail = findViewById(R.id.editEmail);
                 editEmail.setText("");
             }
         });
